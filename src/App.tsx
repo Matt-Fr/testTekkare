@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import hospitalDataArray from "./data/data_exemple1.json";
 import { LineGraph } from "./components/charts/LineChart";
 import { CardMainInfo } from "./components/cards/CardMainInfo";
@@ -8,16 +6,31 @@ import { SpecialtyDonutChart } from "./components/charts/SpecialtyDonutChart";
 import Navbar from "./components/Navbar";
 
 function App() {
-  const hospitalData = hospitalDataArray[0];
-  console.log(hospitalData);
+  const [selectedHospital, setSelectedHospital] = useState(
+    hospitalDataArray[0]
+  );
+
+  const handleSelectHospital = (hospitalName: string) => {
+    const hospital = hospitalDataArray.find((h) => h.name === hospitalName);
+    if (hospital) {
+      setSelectedHospital(hospital);
+    }
+  };
 
   return (
     <>
-      <Navbar></Navbar>
-      <main className=" flex ">
-        <LineGraph hospitalData={hospitalData}></LineGraph>
-        <CardMainInfo hospitalData={hospitalData}></CardMainInfo>
-        <SpecialtyDonutChart hospitalData={hospitalData}></SpecialtyDonutChart>
+      <Navbar
+        hospitals={hospitalDataArray.map((hospital) => ({
+          name: hospital.name,
+        }))}
+        onSelectHospital={handleSelectHospital}
+      />
+      <main className="grid grid-cols-1 md:grid-cols-2 gap-4 auto-rows-auto px-4">
+        <LineGraph hospitalData={selectedHospital}></LineGraph>
+        <CardMainInfo hospitalData={selectedHospital}></CardMainInfo>
+        <SpecialtyDonutChart
+          hospitalData={selectedHospital}
+        ></SpecialtyDonutChart>
       </main>
     </>
   );

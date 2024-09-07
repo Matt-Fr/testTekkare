@@ -60,7 +60,7 @@ export function CardMainInfo({ hospitalData }: CardMainInfoProps) {
             <strong>Number of Nurses:</strong> {numberOfNurses}
           </p>
         </CardContent>
-        <CardFooter>
+        <CardFooter className=" justify-end">
           <p className="mb-2">
             <strong>Satisfaction Rate:</strong> {satisfactionRate}
             <Progress value={satisfactionValue} />
