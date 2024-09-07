@@ -4,6 +4,7 @@ import { LineGraph } from "./components/charts/LineChart";
 import { CardMainInfo } from "./components/cards/CardMainInfo";
 import { SpecialtyDonutChart } from "./components/charts/SpecialtyDonutChart";
 import Navbar from "./components/Navbar";
+import { BarCharts } from "./components/charts/BarCharts";
 
 function App() {
   const [selectedHospital, setSelectedHospital] = useState(
@@ -31,6 +32,9 @@ function App() {
         <SpecialtyDonutChart
           hospitalData={selectedHospital}
         ></SpecialtyDonutChart>
+        <BarCharts
+          hospitalDepartments={selectedHospital.hospitalDepartments}
+        ></BarCharts>
       </main>
     </>
   );
