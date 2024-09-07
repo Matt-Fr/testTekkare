@@ -1,10 +1,8 @@
 import * as React from "react";
-import { TrendingUp } from "lucide-react";
 import { Pie, PieChart, Tooltip, Cell, Label } from "recharts";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -101,7 +99,7 @@ export function SpecialtyDonutChart({
               outerRadius={80}
               strokeWidth={5}
             >
-              {chartData.map((entry, index) => (
+              {chartData.map((_, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
