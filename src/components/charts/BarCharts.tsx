@@ -15,11 +15,10 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 
-// Define the types for the chart data
 interface DepartmentData {
   department: string;
   patientsPerDay: number;
-  averageWaitTime: string; // Original type is string
+  averageWaitTime: string;
 }
 
 interface BarChartsProps {
@@ -49,7 +48,6 @@ const chartConfig = {
 } satisfies ChartConfig;
 
 export function BarCharts({ hospitalDepartments }: BarChartsProps) {
-  // Preprocess the data here
   const processedData = preprocessData(hospitalDepartments);
 
   return (

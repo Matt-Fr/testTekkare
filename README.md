@@ -4,6 +4,10 @@
 
 Tekkaretest is an application designed to display information about hospitals. It uses React with Vite for fast development and build processes. The app incorporates Shadcn React components and Tailwind CSS.
 
+## Demo
+
+You can see a live demo of the application [here](https://test-tekkare.netlify.app/).
+
 ## Technologies Used
 
 - **Vite**:
