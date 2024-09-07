@@ -10,10 +10,10 @@ You can see a live demo of the application [here](https://test-tekkare.netlify.a
 
 ## Technologies Used
 
-- **Vite**:
-- **React**:
-- **Shadcn React**: A collection of UI components for React, including various Radix UI components.
-- **Tailwind CSS**: A utility-first CSS framework for creating custom designs.
+- **Vite**
+- **React**: I used React to quickly create this application. In another context and with more time, I might have used a different library or framework.
+- **Shadcn React**: I used Shadcn for the first time with this test, which includes Radix and Recharts. The code might seem a bit messy because, compared to other libraries, you need to copy the entire code for the components. However, this approach provides more freedom for customization.
+- **Tailwind CSS**: CSS framework included with Shadcn.
 
 ## Installation
 
@@ -71,7 +71,3 @@ The following npm scripts are available:
 - `typescript`: ^5.5.3
 - `typescript-eslint`: ^8.0.1
 - `vite`: ^5.4.1
-
-```
-
-```
